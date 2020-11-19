@@ -1,20 +1,40 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Run in Local Environment
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Prerequissites
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Make sure you understand this article
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+[How To Write NodeJS REST API With Azure Functions — Typescript Version](https://medium.com/bb-tutorials-and-thoughts/how-to-write-nodejs-rest-api-with-azure-functions-typescript-version-3f412fa417a8?source=friends_link&sk=39b8f3fafc6426a00ea642e8668a3828)
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Clone the repository
+
+```
+ git clone https://BloomLMS@dev.azure.com/BloomLMS/Bloom/_git/app_bloom_teacher_api
+```
+
+## Install Dependencies
+
+```
+npm install
+
+```
+
+## add the local.settings.json file
+
+```
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "MONGO_CONNECTION_STRING": "mongodb+srv://Tester123:Tester123@cluster0.dc3nz.mongodb.net/Bloom?retryWrites=true&w=majority"
+  }
+}
+
+```
+
+## Run the Project
+
+```
+ npm start
+```
