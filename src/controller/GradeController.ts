@@ -9,8 +9,8 @@ export class GradeController {
         this.gradeService = new GradeService();
     }
 
-    public async listGrades() {
-        return await this.gradeService.listGrades();
+    public async listGrades(teacherId) {
+        return await this.gradeService.listGrades(teacherId);
     }
 
     public async createGrades(GradeRequest: GradeRequest) {

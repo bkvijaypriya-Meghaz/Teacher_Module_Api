@@ -10,9 +10,9 @@ export class GradeService {
         this.gradeRepository = new GradeRepository();
     }
 
-    async listGrades(): Promise<any> {
+    async listGrades(teacherId): Promise<any> {
 
-        const grades= await this.gradeRepository.listGrades();
+        const grades= await this.gradeRepository.listGrades(teacherId);
 
         console.log("the listed details",grades);
          return grades
