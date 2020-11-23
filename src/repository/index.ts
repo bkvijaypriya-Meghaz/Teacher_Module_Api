@@ -1,0 +1,1 @@
+export { GradeRepository } from './GradeRepository';

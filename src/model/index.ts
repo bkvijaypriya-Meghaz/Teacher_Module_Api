@@ -1,0 +1,1 @@
+export { GradeModel, IGrade } from './grade.model';

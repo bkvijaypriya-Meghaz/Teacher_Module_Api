@@ -1,0 +1,1 @@
+export { GradeResponse } from './grade.response'
