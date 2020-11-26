@@ -1,7 +1,7 @@
 import { connect, disconnect } from "../config/db.config";
-import { GradeModel, IGrade } from '../model';
+import { AssessGradeModel, IAssessgrade } from '../model';
 
-export class GradeRepository {
+export class AssessGradeRepository {
 
     constructor() {
         console.log('In the Repository ::::::::')
@@ -9,13 +9,13 @@ export class GradeRepository {
         console.log('In the Repository ::::::::')
     }
 
-    async createGrade(assessGrade: any) : Promise<any> {
+    async createAssessGrade(asssessGrade: any) : Promise<any> {
         //console.log("from connect: process.env.MONGO_CONNECTION_STRING :::",process.env.MONGO_CONNECTION_STRING)
-        return await GradeModel.create(assessGrade);
+        return await AssessGradeModel.create(asssessGrade);
     }
 
-    async listGrades(studentId:any): Promise<any> {
-        return await GradeModel.find(studentId);
+    async listAssessGrades(studentId:any): Promise<any> {
+        return await AssessGradeModel.findOne(studentId);
     }
 
 

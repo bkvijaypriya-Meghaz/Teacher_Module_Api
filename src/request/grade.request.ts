@@ -2,9 +2,13 @@ import { IRequest } from "./IRequest";
 
 export class Grade {
     teacherid: String;
+    firstname:String;
+    lastname:String;
+    dname:String;
     section:  [{
         sectionid: string
         sectionname: string
+        gradelevel:string
     }
 
    ]
