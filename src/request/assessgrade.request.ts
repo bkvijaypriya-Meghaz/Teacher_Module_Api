@@ -4,13 +4,20 @@ export class AssessGrade {
     teacherid: string;
     studentid:string;
     sectionid:string;
-    assignments:  [{
+    assigned:  [{
+        category:string
+        aname:string
+        duedate:string
+        grading:string
+        score:string
         status: string
-        graded: string
+        graded: boolean
+       
     }
 
 
-    ]
+    ];
+    finalgrade:string
     
   }
 

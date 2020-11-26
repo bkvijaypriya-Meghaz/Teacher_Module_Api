@@ -9,8 +9,8 @@ export class AssessGradeController {
         this.assessGradeService = new AssessGradeService();
     }
 
-    public async listAssessGrades(teacherId) {
-        return await this.assessGradeService.listAssessGrades(teacherId);
+    public async listAssessGrades(studentId) {
+        return await this.assessGradeService.listAssessGrades(studentId);
     }
 
     public async createAssessGrades(AssessGradeRequest: AssessGradeRequest) {

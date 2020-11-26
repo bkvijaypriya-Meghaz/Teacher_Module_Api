@@ -4,14 +4,18 @@ export interface IAssessgrade extends Document {
     teacherId: string;
     studentId:string;
     sectionId:string;
-    assignments:  [{
+    assigned:  [{
+        category:string
+        aName:string
+        dueDate:string
+        grading:string
+        score:string
         status: string
-        graded: string
+        graded: boolean
+        
     }
-
-
-    ]
-    
+    ],
+    finalGrade:string
     
 }
 
@@ -19,9 +23,15 @@ const AssessGradeSchema: Schema = new Schema({
     teacherId: { type: String, required: true },
     studentId:{ type: String, required: true },
     sectionId:{ type: String, required: true },
-    assignments: 
+    assigned: 
              [({
             status: { type: String, required: true },
+            category: { type: String, required: true },
+            aName: { type: String, required: true },
+            dueDate: { type: String, required: true },
+            grading: { type: String, required: true },
+            score: { type: String, required: true },
+            
             graded :{  
                 type : String,
                 required: true
@@ -29,7 +39,8 @@ const AssessGradeSchema: Schema = new Schema({
             
             }
             
-            )]
+            )],
+    finalGrade:{ type: String, required: true }
 
  
     

@@ -14,7 +14,7 @@ const AssessGradeList: AzureFunction = async function (context: Context, req: Ht
     context.res = {
         // status: 200, /* Defaults to 200 */
         
-        body: await assessGradeController.listAssessGrades(req.body.teacherId),
+        body: await assessGradeController.listAssessGrades(req.body.studentId),
         headers: {'Content-Type': 'application/json'}
     };
 

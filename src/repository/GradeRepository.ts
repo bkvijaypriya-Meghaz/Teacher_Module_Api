@@ -14,8 +14,8 @@ export class GradeRepository {
         return await GradeModel.create(assessGrade);
     }
 
-    async listGrades(teacherId:any): Promise<any> {
-        return await GradeModel.find(teacherId);
+    async listGrades(studentId:any): Promise<any> {
+        return await GradeModel.find(studentId);
     }
 
 
