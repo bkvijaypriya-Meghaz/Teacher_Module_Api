@@ -14,7 +14,7 @@ export class GradeService {
 
         const grades= await this.gradeRepository.listGrades(teacherId);
 
-        console.log("the listed details",grades);
+        console.log("the listed details frm grade",grades);
          return grades
         // const gradeList = new Array<Grade>();
         // const gradeResponse = new GradeResponse();

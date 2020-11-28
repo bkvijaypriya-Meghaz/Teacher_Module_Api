@@ -14,7 +14,7 @@ export class StudentService {
 
         const students= await this.studentRepository.listStudents();
 
-        console.log("the listed details",students);
+        console.log("the listed details frm student",students);
          return students
         
     }
