@@ -12,7 +12,7 @@ export class SetUpRepository {
         async listSetUp(schoolId): Promise<any> {
             console.log("received schoolId",schoolId);
             
-        return await SetUpModel.find(schoolId);
+        return await SetUpModel.find({"schoolId":schoolId});
     }
 
 }
