@@ -7,7 +7,10 @@ export class AssessGrade {
     assigned:  [{
         category:string
         aname:string
+        topic:string
+        startdate:string
         duedate:string
+        progress:string
         grading:string
         score:string
         status: string

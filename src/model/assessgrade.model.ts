@@ -6,8 +6,11 @@ export interface IAssessgrade extends Document {
     sectionId:string;
     assigned:  [{
         category:string
+        topic:string
         aName:string
+        startDate:string
         dueDate:string
+        progress:string
         grading:string
         score:string
         status: string
@@ -27,8 +30,11 @@ const AssessGradeSchema: Schema = new Schema({
              [({
             status: { type: String, required: true },
             category: { type: String, required: true },
+            topic: { type: String, required: true },
             aName: { type: String, required: true },
+            startDate: { type: String, required: true },
             dueDate: { type: String, required: true },
+            progress:{ type: String, required: true },
             grading: { type: String, required: true },
             score: { type: String, required: true },
             
