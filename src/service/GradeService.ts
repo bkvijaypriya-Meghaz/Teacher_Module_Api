@@ -35,9 +35,9 @@ export class GradeService {
         // return p;
     }
 
-    public async createGrades(userRequest: GradeRequest) {
+    public async createGrades(userRequest: GradeRequest,teacherId) {
         console .log("after user service its in  step in gradeRepository", GradeRequest);
-        return await this.gradeRepository.createGrade(userRequest.getGrade());
+        return await this.gradeRepository.createGrade(userRequest.getGrade(),teacherId);
     }
 
 }

@@ -13,8 +13,8 @@ export class GradeController {
         return await this.gradeService.listGrades(teacherId);
     }
 
-    public async createGrades(GradeRequest: GradeRequest) {
+    public async createGrades(GradeRequest: GradeRequest,teacherId) {
         
-        return await this.gradeService.createGrades(GradeRequest);
+        return await this.gradeService.createGrades(GradeRequest,teacherId);
     }
 }

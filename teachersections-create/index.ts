@@ -6,9 +6,9 @@ const GradeCreate: AzureFunction = async function (context: Context, req: HttpRe
     context.log('HTTP trigger function processed a request.');
     
     const gradeController = new GradeController();
-    const grade = req.body && req.body.grade;
-    const gradeRequest = new GradeRequest(grade);
-    const result = await gradeController.createGrades(gradeRequest);
+    const teacherSetup = req.body && req.body.teacherSetup;
+    const gradeRequest = new GradeRequest(teacherSetup);
+    const result = await gradeController.createGrades(gradeRequest,req.body.teacherSetup.teacherId);
     console.log("final result of Grade create will be",result)
 
     context.res = {

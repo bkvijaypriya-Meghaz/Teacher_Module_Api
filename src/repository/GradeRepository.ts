@@ -9,13 +9,24 @@ export class GradeRepository {
         console.log('In the Repository ::::::::')
     }
 
-    async createGrade(assessGrade: any) : Promise<any> {
+    async createGrade(assessGrade: any,teacherId:any) : Promise<any> {
         //console.log("from connect: process.env.MONGO_CONNECTION_STRING :::",process.env.MONGO_CONNECTION_STRING)
-        return await GradeModel.create(assessGrade);
+        //Grade.count({/* criteria */}, { limit: 1 })
+         
+        const teacherValue=await GradeModel.count({"teacherId": teacherId});
+        console.log("count value is",teacherValue)
+        if(teacherValue > 0)
+        {
+            return[]
+        }
+         else
+        //console.log("outside If teacher value is",teacherValue)
+         return await GradeModel.create(assessGrade);
+        
     }
 
-    async listGrades(studentId:any): Promise<any> {
-        return await GradeModel.find(studentId);
+    async listGrades(teacherId:any): Promise<any> {
+        return await GradeModel.find({"teacherId": teacherId});
     }
 
 
