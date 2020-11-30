@@ -14,7 +14,7 @@ const SetUpList: AzureFunction = async function (context: Context, req: HttpRequ
     context.res = {
         // status: 200, /* Defaults to 200 */
         
-        body: await setUpController.listSetUp(req.body.schoolId),
+        body: await setUpController.listSetUp(req.params.schoolId),
         headers: {'Content-Type': 'application/json'}
     };
 

@@ -31,7 +31,7 @@ const SetUpSchema: Schema = new Schema({
             
             
             )],
-            gradeLevel: { type: String, required: true }
+            gradeLevel: [{ type: String, required: true }]
 
  
     
@@ -48,4 +48,4 @@ const SetUpSchema: Schema = new Schema({
 
 // )
 
-export const SetUpModel: Model<ISetup> = model<ISetup>('schoolmaster', SetUpSchema);
+export const SetUpModel: Model<ISetup> = model<ISetup>('master-school', SetUpSchema);

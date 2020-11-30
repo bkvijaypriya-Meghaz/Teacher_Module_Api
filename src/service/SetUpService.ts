@@ -1,5 +1,5 @@
 import { SetUpRepository } from '../repository';
-
+import { SetUpRequest, SetUp } from '../request';
 export class SetUpService {
 
     setUpRepository: SetUpRepository;
@@ -17,6 +17,10 @@ export class SetUpService {
         console.log("the listed details frm setup",setUp);
          return setUp
         
+    }
+    public async createSetUp(SetUpRequest: SetUpRequest) {
+        console .log("after user service its in  step in StudentRepository", SetUpRequest);
+        return await this.setUpRepository.createSetUp(SetUpRequest.getSetUp());
     }
 
     }

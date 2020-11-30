@@ -1,4 +1,5 @@
 import { SetUpService } from '../service';
+import { SetUpRequest} from '../request'
 
 export class SetUpController {
 
@@ -11,6 +12,9 @@ export class SetUpController {
     public async listSetUp(schoolId) {
         return await this.setUpService.listSetUp(schoolId);
     }
-
+    public async createSetUp(SetUpRequest: SetUpRequest) {
+        
+        return await this.setUpService.createSetUp(SetUpRequest);
+    }
    
 }
