@@ -9,7 +9,7 @@
         "get"
        
       ],
-      "route": "teacher/{schoolId}"
+      "route": "teacher/setup/{schoolId}"
     },
     {
       "type": "http",
